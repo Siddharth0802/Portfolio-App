@@ -119,6 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Stack(
                 children: <Widget>[
                   Container(
+
                     child: Image.asset('assets/cover.jpg',),
                   ),
                   Container(
@@ -142,8 +143,10 @@ class _MyHomePageState extends State<MyHomePage> {
               // color: Color(0xFF7978FF),
               margin: EdgeInsets.fromLTRB(50, 40, 50, 0),
               decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),color: Color(0xFF47B5FF),),
-              child: Text('Hello Everone!! This is Siddharth Singh, born in Gorakhpur brought up in Prayagraj where I completed my 10+2 from Maharshi Patanjali Vidya Mandir and now a  2\'nd Year Engineering Student in Computer Science & Information Tecnology at Ajay Kumar Garg Engineering College. ',
-                style: GoogleFonts.aBeeZee(fontSize: 18),),
+              child: ListView(
+                children:[ Text('Hello Everone!! This is Siddharth Singh, born in Gorakhpur brought up in Prayagraj where I completed my 10+2 from Maharshi Patanjali Vidya Mandir and now a  2\'nd Year Engineering Student in Computer Science & Information Tecnology at Ajay Kumar Garg Engineering College. ',
+                  style: GoogleFonts.aBeeZee(fontSize: 18),),]
+              ),
             ),
             Container(
               alignment: Alignment.bottomLeft,
@@ -228,15 +231,17 @@ class EduPage extends StatelessWidget{
             Row(
               children: [
                 Container(
-                  margin: EdgeInsets.fromLTRB(120, 10, 0, 0),
+                  margin: EdgeInsets.fromLTRB(120, 10, 5, 0),
                   padding: EdgeInsets.fromLTRB(8, 2, 5, 5),
                   height: 150,
                   width: 260,
 
-                  child: Center(
-                    child: Text('I have been studying in Ajay Kumar Garg Engineering College since 2021 and I have joined this college in Computer Science and Information Technology Department and now I am in 2nd Year with 7.15 SGPA in 1st Year SGPA.After 1 Years studying in this college I would say that this college provides alot of opportunities for personal and technical development apart from studies'
-                      ,style: GoogleFonts.ubuntu(),),
-                  ),
+                  child: ListView(children: [
+                     Center(
+                       child: Text('I have been studying in Ajay Kumar Garg Engineering College since 2021 and I have joined this college in Computer Science and Information Technology Department and now I am in 2nd Year with 7.15 SGPA in 1st Year SGPA.After 1 Years studying in this college I would say that this college provides alot of opportunities for personal and technical development apart from studies'
+                        ,style: GoogleFonts.ubuntu(),),
+                     ),
+                  ]),
                   decoration: BoxDecoration(color: Colors.blueAccent,borderRadius: BorderRadius.circular(15),
 
                   ),
@@ -277,15 +282,17 @@ class EduPage extends StatelessWidget{
             Row(
               children: [
                 Container(
-                  margin: EdgeInsets.fromLTRB(120, 10, 0, 10),
-                  padding: EdgeInsets.fromLTRB(8, 2, 5, 5),
-                  height: 150,
-                  width: 252,
+                  margin: EdgeInsets.fromLTRB(120, 10, 5, 10),
+                  padding: EdgeInsets.fromLTRB(8, 5, 5, 5),
+                  height: 130,
+                  width: 250,
 
-                  child: Center(
-                    child: Text('I have Studied my High School and Intermediate from Maharishi Patanjali Vidya Mandir which is situated in Prayagraj, and I did around 12 years of schooling from the same.Scoring 81.8% in 10\'th Standard and 83.8% in 10+2.The School experiance was overwhelming and help me get disciplined in the way I am. ',
-                      style: GoogleFonts.ubuntu(),),
-                  ),
+                  child: ListView(children: [
+                    Center(
+                      child: Text('I have Studied my High School and Intermediate from Maharishi Patanjali Vidya Mandir which is situated in Prayagraj, and I did 9 years of schooling from the same.Scoring 81.8% in 10\'th Standard and 83.8% in 10+2.The School experiance was overwhelming and help me get disciplined in the way I am. ',
+                        style: GoogleFonts.ubuntu(),),
+                    ),
+                  ]),
                   decoration: BoxDecoration(color: Colors.blueAccent,borderRadius: BorderRadius.circular(15),
 
                   ),
@@ -343,8 +350,10 @@ class SkillsPage extends StatelessWidget{
                 padding: EdgeInsets.fromLTRB(6, 2,0, 2),
                 height: 130,width: 212,
                 decoration: BoxDecoration(color: Colors.blue,borderRadius: BorderRadius.circular(15)),
-                child:const Center(child: Text('I am a learner in App Development using Dart language and Flutter Software Development Kit.This Portfolio App is one of my first project which help me learn the basics of the development, I hope i will continue my discovery in the field.'),),
-              ),
+                child:ListView( children: [
+                  Text('I am a learner in App Development using Dart language and Flutter Software Development Kit.This Portfolio App is one of my first project which help me learn the basics of the development, I hope i will continue my discovery in the field.',
+                  ),
+              ]),)
             ],
           ),
 
@@ -372,7 +381,8 @@ class SkillsPage extends StatelessWidget{
                 margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
                 padding: EdgeInsets.fromLTRB(10, 2, 2, 2),
                 height: 130,width: 225,
-                child: Center(child: Text('I was earlier a C coder and now I \nhave switched to C++ being Object Oriented and more practical language.I used HackerRank Platform for practicing the basics of C++ concepts and recently have started Competitive Coding on CodeChef platform.'),),
+                child: ListView(children: [Text('I was earlier a C coder and now I \nhave switched to C++ being Object Oriented and more practical language.I used HackerRank Platform for practicing the basics of C++ concepts and recently have started Competitive Coding on CodeChef platform.'
+                    ),],),
                 decoration: BoxDecoration(color: Colors.blue,borderRadius: BorderRadius.circular(15)),
               ),
             ],
@@ -403,7 +413,8 @@ class SkillsPage extends StatelessWidget{
                 padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
                 height: 105,width: 210,
                 decoration: BoxDecoration(color: Colors.blue,borderRadius: BorderRadius.circular(15)),
-                child: const Center(child: Text('I did game development in my spare time while lockdown and learned the basics from youtube making a game with resemblance of Subway Surfers using Unity Platform and CSharp Language'),),
+                child: ListView(children:[ Text('I did game development in my spare time while lockdown and learned the basics from youtube making a game with resemblance of Subway Surfers using Unity Platform and CSharp Language'
+                ),],)
               ),
             ],
           ),
